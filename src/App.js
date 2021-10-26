@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Widgets from "./components/Widgets";
+import { HOME, POST_COLLECTION } from "./common/Api";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <h1 className="page-title">
+        ABC College of engineering
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          className="float-right btn btn-primary btn-lg"
+          href={HOME + POST_COLLECTION}
           target="_blank"
-          rel="noopener noreferrer"
+          download
+          rel="noreferrer"
         >
-          Learn React
+          Download Postman Collection
         </a>
-      </header>
+      </h1>
+      <Widgets />
     </div>
   );
 }
